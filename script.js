@@ -1,26 +1,29 @@
-const userChoise = prompt("Write: stone or paper or scissors")
-const computerSign = ["stone", "paper", "scissors"]
+const userChoice = prompt("Write: rock or paper or scissors")
+const computerSign = ["rock", "paper", "scissors"]
 const computerPick = Math.floor(Math.random() * computerSign.length)
-const computerChoise = computerSign[computerPick]
+const computerChoice = computerSign[computerPick]
 
-function game(computerChoise, userChoise) {
+function game(computerChoice, userChoice) {
 
-if (computerChoise === userChoise) {
-    return alert("Draw!")
-} else if (
-    (userChoise === "stone" && computerChoise === "scissors") ||
-    (userChoise === "paper" && computerChoise === "stone") ||
-    (userChoise === "scissors" && computerChoise === "paper")) {
-    return alert(`You Win! computer chose ${computerChoise}`)
-    
-} else if (userChoise != "stone" || userChoise != "paper" || userChoise != "stone") {
-    return alert("Must write: stone or paper or scissors")
-
-} else {
-    return alert(`Computer Win! It chose ${computerChoise}`)
-}
+     if (userChoice === computerChoice) {
+          return alert("Draw")
+     } else if (
+          (userChoice === "rock" && computerChoice === "scissors") ||
+          (userChoice === "paper" && computerChoice === "rock") ||
+          (userChoice === "scissors" && computerChoice === "paper")) {
+          return alert(`You Win! computer chose ${computerChoice}`)
         
-};
-game(computerChoise, userChoise)
 
-console.log(computerChoise)
+     } else if (
+          (computerChoice === "rock" && userChoice === "scissors") ||
+          (computerChoice === "paper" && userChoice === "rock") ||
+          (computerChoice === "scissors" && userChoice === "paper")) {
+          return alert(`Computer Win! It chose ${computerChoice}`)
+     } else {
+          return alert("Must write: rock or paper or scissors")
+     }
+};
+game(computerChoice, userChoice)
+
+console.log(computerChoice)
+console.log(userChoice)
