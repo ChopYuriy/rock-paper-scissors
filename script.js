@@ -1,4 +1,4 @@
-const userChoice = prompt("Write: rock or paper or scissors")
+const userChoice = prompt("Write: rock or paper or scissors").toLowerCase()
 const computerSign = ["rock", "paper", "scissors"]
 const computerPick = Math.floor(Math.random() * computerSign.length)
 const computerChoice = computerSign[computerPick]
