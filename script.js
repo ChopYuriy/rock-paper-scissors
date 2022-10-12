@@ -24,6 +24,7 @@ function game(computerChoice, userChoice) {
      }
 };
 game(computerChoice, userChoice)
+window.location.reload();
 
 console.log(computerChoice)
 console.log(userChoice)
